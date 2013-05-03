@@ -27,7 +27,8 @@ Add the following directive to your Javascript manifest file (application.js):
     
 Add the following directive to your css manifest file (application.css):
 
-    //= require morris
+     *= require morris
+
 
 ## Versioning
 
