@@ -24,6 +24,11 @@ Add the following directive to your Javascript manifest file (application.js):
 
     //= require raphael
     //= require morris
+    
+Add the following directive to your css manifest file (application.css):
+
+     *= require morris
+
 
 ## Versioning
 
