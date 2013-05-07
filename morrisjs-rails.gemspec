@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = "morris.js for the Rails Asset Pipeline"
   gem.summary       = "morris.js for the Rails Asset Pipeline"
   gem.homepage      = "https://github.com/beanieboi/morrisjs-rails"
+  gem.licenses      = ['MIT']
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
