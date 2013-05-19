@@ -1,5 +1,5 @@
 module Morrisjs
   module Rails
-    VERSION = "0.4.2.1"
+    VERSION = "0.4.3"
   end
 end
