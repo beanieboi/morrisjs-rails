@@ -846,6 +846,14 @@ Licensed under the BSD-2-Clause License.
         y = _ref[j];
         content += "<div class='morris-hover-point' style='color: " + (this.colorFor(row, j, 'label')) + "'>\n  " + this.options.labels[j] + ":\n  " + (this.yLabelFormat(y)) + "\n</div>";
       }
+      // display extra data given by labels
+      for (var j in row.src){
+        // if this is a label that is not an x label, or ykey, and is specified in the labels
+        if (j != this.options.xkey && this.options.labels.indexOf(j)!=-1 && this.options.ykeys.indexOf(j)==-1)
+        {
+          content += "<div class='morris-hover-point' style='color: " + (this.colorFor(row, 0, 'label')) + "'>\n  " + j + ":\n  " + row.src[j] + "\n</div>";
+        }
+      }
       if (typeof this.options.hoverCallback === 'function') {
         content = this.options.hoverCallback(index, this.options, content, row.src);
       }
@@ -1592,6 +1600,15 @@ Licensed under the BSD-2-Clause License.
       for (j = _i = 0, _len = _ref.length; _i < _len; j = ++_i) {
         y = _ref[j];
         content += "<div class='morris-hover-point' style='color: " + (this.colorFor(row, j, 'label')) + "'>\n  " + this.options.labels[j] + ":\n  " + (this.yLabelFormat(y)) + "\n</div>";
+      }
+      console.debug(this.options.xkey);
+      // display extra data given by labels
+      for (var j in row.src){
+        // if this is a label that is not an x label, or ykey, and is specified in the labels
+        if (j != this.options.xkey && this.options.labels.indexOf(j)!=-1 && this.options.ykeys.indexOf(j)==-1)
+        {
+          content += "<div class='morris-hover-point' style='color: " + (this.colorFor(row, 0, 'label')) + "'>\n  " + j + ":\n  " + row.src[j] + "\n</div>";
+        }
       }
       if (typeof this.options.hoverCallback === 'function') {
         content = this.options.hoverCallback(index, this.options, content, row.src);
