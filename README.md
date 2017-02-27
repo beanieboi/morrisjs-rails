@@ -30,6 +30,11 @@ Add the following directive to your css manifest file (application.css):
      *= require morris
 
 
+Add the following directive to your sass manifest file (application.scss):
+
+     @import 'morrisjs-rails';
+
+
 ## Versioning
 
 The naming schema is identical to morris.js.
