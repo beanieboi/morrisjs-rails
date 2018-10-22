@@ -2,6 +2,10 @@
 
 morris.js for the Rails Asset Pipeline
 
+## Dependency on jQuery
+
+This library requires jQuery. If you are using Rails 5.1 or later, jQuery is not included in a new installation. You need to add jQuery to Rails by yourself.
+
 ## Installation
 
 Add this to your application's Gemfile:
